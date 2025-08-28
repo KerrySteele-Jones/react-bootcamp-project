@@ -1,25 +1,19 @@
-// App.js
-import { useState } from 'react';
-import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import ProjectsPage from "./pages/ProjectsPage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
 
-function App() {
-
-  const [page, setPage] = useState('home');
-
-  // TODO: How doe sthe Layout component know which page to render?
-
+export default function App() {
   return (
-    <Layout selectedPage={page} onSetPage={setPage}>
-
-      {page === 'home' && <HomePage />}
-      {page === 'about' && <AboutPage />}
-      {page === 'contact' && <ContactPage />}
-
+    <Layout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
     </Layout>
   );
 }
-
-export default App;

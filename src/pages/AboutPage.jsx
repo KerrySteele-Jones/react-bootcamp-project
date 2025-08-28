@@ -1,13 +1,8 @@
-// HomePage.js
-import React from 'react';
-
-const HomePage = () => {
+export default function AboutPage() {
   return (
-    <div>
-      <h2>Welcome to the About Page</h2>
-      <p>This is the main content of the about page.</p>
-    </div>
+    <section style={{ padding: "56px 0" }}>
+      <h1>About</h1>
+      <p className="muted">Short bio goes here.</p>
+    </section>
   );
-};
-
-export default HomePage;
+}

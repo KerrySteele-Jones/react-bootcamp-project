@@ -1,13 +1,10 @@
-// HomePage.js
-import React from 'react';
+import HomeHero from "../components/HomeHero";
 
-const HomePage = () => {
+export default function HomePage() {
   return (
-    <div>
-      <h2>Welcome to the Home Page</h2>
-      <p>This is the main content of the home page.</p>
-    </div>
+    <>
+      <HomeHero />
+      {/* later: you can add a small “about” blurb or featured project section here */}
+    </>
   );
-};
-
-export default HomePage;
+}
