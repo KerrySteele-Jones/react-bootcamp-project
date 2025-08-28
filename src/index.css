@@ -5,11 +5,17 @@
   --fg: #0b0b0b;
   --muted: #6b6b6b;
   --rule: #eaeaea;
-  --accent: #ff2a7a; /* vibrant pink */
+  --accent: #ff2a7a; 
 
   /* layout */
   --container-max: 1100px;
   --nav-h: 68px;
+  --block-pad: clamp(20px, 4vw, 48px);
+  --display-min: 2.2rem;   /* same as footer */
+  --display-fluid: 6vw;
+  --display-max: 5rem;
+  --error: #e03131;           
+
 
   /* spacing scale */
   --space-1: 4px;
@@ -40,7 +46,7 @@
   --panel-muted: #9c9ca3;   /* muted on panel */
 }
 
-/* ===== Reset / base ===== */
+/* Reset / base  */
 *,
 *::before,
 *::after {
@@ -80,7 +86,7 @@ a:hover {
   padding: 0 var(--space-5);
 }
 
-/* ===== Nav / Header ===== */
+/* Nav / Header */
 .site-header {
   position: sticky;
   top: 0;
@@ -96,7 +102,7 @@ a:hover {
   justify-content: space-between;
 }
 
-/* --- Brand stack in header --- */
+/* Brand stack in header */
 .brand-stack {
   display: inline-flex;
   flex-direction: column;
@@ -121,12 +127,12 @@ a:hover {
   font-size: clamp(1rem, 2.2vw, 1.375rem);
 }
 
-/* subtle brand hover */
+/* brand hover */
 .brand-stack:hover .brand-title {
   color: var(--accent);
 }
 
-/* keep header tidy on small screens */
+/*  on small screens */
 @media (max-width: 480px) {
   .nav a {
     padding: 0 var(--space-2);
@@ -145,7 +151,7 @@ a:hover {
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-/* hover = pink text (remove underline for a cleaner feel) */
+/* hover = pink text */
 .nav a:hover {
   color: var(--accent);
   text-decoration: none;
@@ -167,12 +173,12 @@ main.container {
   padding-top: var(--space-6);
 }
 
-/* ===== Utilities ===== */
+/*  Utilities  */
 .muted {
   color: var(--muted);
 }
 
-/* ===== Footer ===== */
+/* Footer  */
 .site-footer {
   border-top: 1px solid var(--rule);
   padding: var(--space-7) 0;
@@ -201,11 +207,13 @@ main.container {
   color: var(--muted);
 }
 
+.display-title,
 .lets {
   margin: 0 0 var(--space-4);
-  font-size: clamp(2.2rem, 6vw, 5rem);
+  font-size: clamp(var(--display-min), var(--display-fluid), var(--display-max));
   line-height: 1.02;
   letter-spacing: -0.02em;
+  font-weight: 800;
 }
 
 .footer-cta-actions {
@@ -219,7 +227,7 @@ main.container {
   text-underline-offset: 3px;
 }
 
-/* tasteful footer hover accent */
+/* footer hover accent */
 .underline-link:hover,
 .footer-links a:hover {
   color: var(--accent);
@@ -247,7 +255,7 @@ main.container {
   outline-offset: 2px;
 }
 
-/* ===== Home split hero ===== */
+/*  Home split hero */
 .home-split {
   display: grid;
   grid-template-columns: 1fr;
@@ -255,25 +263,26 @@ main.container {
   padding: var(--space-7) 0;
   align-items: stretch;
   border-radius: var(--radius-2);
-  overflow: hidden; /* neat rounded corners on the whole block */
+  overflow: hidden; 
 }
 
 /* two columns from tablet up */
 @media (min-width: 900px) {
   .home-split {
-    grid-template-columns: 1.1fr 1fr; /* image left slightly larger */
+    grid-template-columns: 1.1fr 1fr; 
   }
 }
 
 /* Left: image */
 .home-image {
-  background: #ddd;
-  min-height: 340px;
+  min-height: clamp(260px, 40vw, 400px); 
+  background: #e5e5e5;
+  overflow: hidden;              
 }
+
 .home-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 /* Right: dark panel */
@@ -352,4 +361,130 @@ main.container {
 }
 .panel-actions .underline-link:hover {
   color: var(--accent);
+}
+
+/* Contact Form */
+
+.form {
+  max-width: 720px;
+  display: grid;
+  gap: var(--space-5);
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+label,
+legend {
+  font-weight: 600;
+}
+
+/* helper / small note under fields */
+.help {
+  color: var(--muted);
+  font-size: var(--font-size-sm);
+}
+
+/* inputs */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-1);
+  background: var(--bg);
+  color: var(--fg);
+  font-size: var(--font-size-base);
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* placeholder tone */
+::placeholder {
+  color: var(--muted);
+  opacity: .9;
+}
+
+/* focus state (brand accent) */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+
+/* error styles (use aria-invalid="true" or .is-invalid on the control) */
+[aria-invalid="true"],
+.is-invalid {
+  border-color: var(--error) !important;
+  outline-color: var(--error) !important;
+}
+
+.error-msg {
+  color: var(--error);
+  font-size: var(--font-size-sm);
+}
+
+/* success / failure banners (optional) */
+.form-note {
+  padding: 12px 14px;
+  border-radius: var(--radius-1);
+  border: 1px solid var(--rule);
+}
+
+.form-note.success {
+  border-color: color-mix(in srgb, var(--success) 35%, #0000);
+  color: var(--success);
+}
+
+.form-note.failure {
+  border-color: color-mix(in srgb, var(--error) 35%, #0000);
+  color: var(--error);
+}
+
+/* actions */
+.btn {
+  border: 1px solid var(--fg);
+  background: var(--fg);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: var(--radius-1);
+  cursor: pointer;
+  transition: transform .06s ease, background-color .15s ease, border-color .15s ease;
+}
+
+.btn:hover {
+  background: var(--accent);          /* pink on hover */
+  border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn:hover { transition: none; transform: none; }
 }
