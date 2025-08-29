@@ -4,10 +4,12 @@ import ProjectCard from "../components/ProjectCard.jsx";
 export default function ProjectsPage() {
   return (
     <section style={{ padding: "56px 0" }}>
-      <h1 className="display-title">Projects</h1>
-      <p className="muted" style={{ marginBottom: 24 }}>
-        Eight weekly challenges + the final project.
-      </p>
+      <header className="page-header">
+        <p className="page-eyebrow">EDUCATION • XR • CODE • PROTOTYPING</p>
+        <h1 className="page-title">
+         Projects
+        </h1>
+      </header>
 
       <div className="cards">
         {projects.map((p) => (

@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: "w01",
-    title: "Responsive Layout",
+    title: "Personal Webpage & GitHub Workflow",
     tech: ["HTML", "CSS", "Grid"],
     description: "Mobile-first responsive page with grid and media queries.",
     repo: "#",
@@ -12,7 +12,7 @@ export const projects = [
   },
   {
     id: "w02",
-    title: "JavaScript Fundamentals",
+    title: "Creating a Multi-Page Responsive Website",
     tech: ["JavaScript"],
     description: "Variables, functions, conditions—rendering basic interactions.",
     repo: "#",
@@ -23,7 +23,7 @@ export const projects = [
   },
   {
     id: "w03",
-    title: "DOM Playground",
+    title: "Modernising with Bootstrap: Site Migration",
     tech: ["JavaScript", "DOM"],
     description: "Manipulating elements, events, and dynamic content.",
     repo: "#",
@@ -34,7 +34,7 @@ export const projects = [
   },
   {
     id: "w04",
-    title: "Objects & Loops",
+    title: "Building a Dynamic Weather Dashboard",
     tech: ["JavaScript"],
     description: "Data modelling and iteration to build small UI pieces.",
     repo: "#",
@@ -45,7 +45,7 @@ export const projects = [
   },
   {
     id: "w05",
-    title: "Fetch Gallery",
+    title: "The Interactive To-Do List App",
     tech: ["JS", "Fetch API"],
     description: "Calls a public API and renders a small gallery.",
     repo: "#",
@@ -56,7 +56,7 @@ export const projects = [
   },
   {
     id: "w06",
-    title: "CSS Motion Studies",
+    title: "Automating Documentation: GitHub README Generator",
     tech: ["CSS"],
     description: "Micro-interactions with transitions and keyframes.",
     repo: "#",
@@ -78,7 +78,7 @@ export const projects = [
   },
   {
     id: "w08",
-    title: "Components Preview",
+    title: "Showcasing Work: React Portfolio",
     tech: ["React"],
     description: "Small component experiments leading into React.",
     repo: "#",
@@ -89,7 +89,7 @@ export const projects = [
   },
   {
     id: "final",
-    title: "Final Project — React Portfolio",
+    title: "Final Project: SME Networking Microblog",
     tech: ["React"],
     description: "Your capstone portfolio site with filtering and deployment.",
     repo: "#",

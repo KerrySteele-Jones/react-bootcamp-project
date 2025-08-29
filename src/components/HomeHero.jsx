@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { projects } from "../data/projects.js";
 
 export default function HomeHero() {
-  const featured = (projects || []).slice(0, 5);
+  const featured = (projects || []).slice(0, 8);
 
   return (
     <section className="home-split">
@@ -16,7 +16,7 @@ export default function HomeHero() {
         <div className="home-panel-content">
           <p className="eyebrow panel-eyebrow">I’m Kerry, a designer for learning</p>
           <h1 className="home-title">
-            exploring immersive media<br />and creative tech for learning.
+            exploring immersive media<br />and creative tech.
           </h1>
           <p className="home-strap muted-on-panel">
             I design clear, human experiences that help people learn and create with new technology.
