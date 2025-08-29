@@ -14,12 +14,12 @@ export default function HomeHero() {
       {/* Right: dark panel with intro + list */}
       <div className="home-panel">
         <div className="home-panel-content">
-          <p className="eyebrow panel-eyebrow">I’m Kerry, a digital designer</p>
+          <p className="eyebrow panel-eyebrow">I’m Kerry, a designer for learning</p>
           <h1 className="home-title">
-            exploring immersive media<br />and creative tech.
+            exploring immersive media<br />and creative tech for learning.
           </h1>
           <p className="home-strap muted-on-panel">
-            I design interactive experiences that connect people with stories and technology.
+            I design clear, human experiences that help people learn and create with new technology.
           </p>
 
           <h2 className="panel-heading">Selected Projects</h2>
