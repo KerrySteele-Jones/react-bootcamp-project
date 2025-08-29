@@ -71,7 +71,7 @@ export const projects = [
     tech: ["React"],
     description: "A React-based portfolio to showcase skills and accomplishments.",
     repo: "https://github.com/KerrySteele-Jones/react-bootcamp-project",
-    demo: "https://github.com/KerrySteele-Jones/react-bootcamp-project",
+    demo: "https://kerrys-portfolio.onrender.com/",
     cover: "/images/w07.png",
     week: 7,
     featured: false,
