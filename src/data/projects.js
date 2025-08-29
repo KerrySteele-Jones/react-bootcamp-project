@@ -24,7 +24,7 @@ export const projects = [
   {
     id: "w03",
     title: "Modernising with Bootstrap: Site Migration",
-    tech: ["BOOTSTRAP"],
+    tech: ["Bootstrap"],
     description: "Migrating an existing website to Bootstrap to leverage its responsive design, utility classes, and pre-built components for easier updates and maintenance.",
     repo: "https://github.com/KerrySteele-Jones/bootstrap-bootcamp-project",
     demo: "https://kerrysteele-jones.github.io/bootstrap-bootcamp-project/",

@@ -10,12 +10,9 @@ export default function Footer() {
           <h2 className="lets">LET’S TALK</h2>
 
           <div className="footer-cta-actions">
-            {/* update these to your real links */}
-            <a href="mailto:hello@yourdomain.com" className="underline-link">
-              Email
-            </a>
+      
             <a
-              href="https://www.linkedin.com/in/your-handle"
+              href="https://www.linkedin.com/in/kerry-steele-jones/"
               target="_blank"
               rel="noreferrer"
               className="underline-link"
