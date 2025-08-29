@@ -1,4 +1,4 @@
-// src/components/HomeHero.jsx
+
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects.js";
 

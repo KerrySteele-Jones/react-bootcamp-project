@@ -488,7 +488,7 @@ textarea:focus-visible {
   .btn:hover { transition: none; transform: none; }
 }
 
-/* ===== Project grid ===== */
+/* Project grid */
 .cards {
   display: grid;
   gap: var(--space-6);
@@ -523,7 +523,7 @@ textarea:focus-visible {
 
 /* media (top image) */
 .card-media {
-  aspect-ratio: 16 / 10;          /* consistent crop */
+  aspect-ratio: 16 / 10;          
   overflow: hidden;
   background: #f2f2f2;
 }
