@@ -24,7 +24,7 @@ Each project will get its own internal page (a short write-up/case study). When 
 
 
 ## 🧱 Tech Stack
-React, [your CSS approach: Tailwind/CSS Modules/Vanilla], Vite/CRA, Icons (e.g. Heroicons), Render.
+React,CSS Render.
 
 ## 📦 Setup
 
